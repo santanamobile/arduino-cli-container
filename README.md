@@ -12,7 +12,7 @@ This image supports there cores:
 To build the image, use this command:
 
 ```bash
-  docker build --no-cache --build-arg "host_uid=$(id -u)" --build-arg "host_gid=$(id -g)" --pull --rm -t compilador-arduino-cli:v0.0.1 .
+  docker build --no-cache --build-arg "host_uid=$(id -u)" --build-arg "host_gid=$(id -g)" --pull --rm -t arduino-cli-container:v0.0.1 .
 ```
 
 ## Run the docker Image
@@ -20,7 +20,7 @@ To build the image, use this command:
 In the project directory, run:
 
 ```bash
-    docker run --rm -it --privileged -p 50051:50051 -v ${PWD}:/arduino -w /arduino -it compilador-arduino-cli:v0.0.1
+    docker run --rm -it --privileged -p 50051:50051 -v ${PWD}:/arduino -w /arduino -it arduino-cli-container:v0.0.1
 ```
 
 ## Compile sketch
